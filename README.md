@@ -11,7 +11,6 @@
 <p> pip install numpy </p>
 <p> pip install matplotlib </p>
 
-<p> the function is of one variable x </br>
 
 <h2> supported operators: </h2>
 <h3> + - / * ^ </h3>
