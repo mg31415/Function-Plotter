@@ -15,9 +15,11 @@ the function is of one variable x
 
 supported functions:
 
-x^n 
-e^(x)   
-ln(x)   
-sin(x)
-cos(x)
-tan(x)
+<h1> x^n </h1>
+<h1> e^(x) </h1>
+<h1> ln(x)</h1>
+<h1> sin(x)</h1>
+<h1> cos(x)</h1>
+<h1> tan(x) </h1>
+
+![alt text](https://i.imgur.com/Ej8XCT7.png)
