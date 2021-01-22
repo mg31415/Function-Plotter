@@ -38,7 +38,6 @@ class  MainWidget ( QWidget ):
 
         designer_file  =  QFile ( "gui.ui" ) 
         designer_file . open ( QFile . ReadOnly )
-
         loader  =  QUiLoader () 
         loader . registerCustomWidget ( MplWidget ) 
         self . ui  =  loader . load ( designer_file ,  self )
@@ -72,14 +71,15 @@ class  MainWidget ( QWidget ):
             self . ui . MplWidget . canvas . axes . plot ( x ,  eval(f) ) 
 
         except NameError:
-             print ("Please make sure that your input is only function of x and e(x),ln(x),etc has parenthesis ")
-
+            self.nameError()
+             
+        
         except SyntaxError:
-            print ("Please enter a valid syntax i.e enter 2*x not 2x")
+            self.syntaxError()
 
 
         except:
-            print ("oops something went wrong, please try again")
+            self.error()
 
 
 
@@ -88,6 +88,15 @@ class  MainWidget ( QWidget ):
         self . ui . MplWidget . canvas . draw ()
         
 
+    def nameError(self):
+        QMessageBox.warning(self, "error", "Please make sure that your input is only function of x and e(x),ln(x),etc has parenthesis ")
+
+    def syntaxError(self):
+            QMessageBox.warning(self, "error", "Please enter a valid syntax i.e enter 2*x not 2x")
+
+
+    def error(self):
+            QMessageBox.warning(self, "error", "oops something went wrong, please enter a valid input")
 
 
 class Plotter:
@@ -124,7 +133,7 @@ class Plotter:
         p1=f.find("sin(")+4
         p2=f.find(")",p1)
         x=f[p1:p2]
-        f=f.replace("sin({})".format(x),"np.sin({}* np.pi / 180)".format(x))
+        f=f.replace("sin({})".format(x),"np.sin(({})* np.pi / 180)".format(x))
         
         return f
         
@@ -135,7 +144,7 @@ class Plotter:
         p1=f.find("cos(")+4
         p2=f.find(")",p1)
         x=f[p1:p2]
-        f=f.replace("cos({})".format(x),"np.cos({}* np.pi / 180)".format(x))
+        f=f.replace("cos({})".format(x),"np.cos(({})* np.pi / 180)".format(x))
         return f
         
         
@@ -146,7 +155,7 @@ class Plotter:
         p1=f.find("tan(")+4
         p2=f.find(")",p1)
         x=f[p1:p2]
-        f=f.replace("tan({})".format(x),"np.tan({}* np.pi / 180)".format(x))
+        f=f.replace("tan({})".format(x),"np.tan(({})* np.pi / 180)".format(x))
         
         return f
         
@@ -165,18 +174,7 @@ class Plotter:
 
 
 
-    # the plot function takes 3 arguments, f (the inputted function), xMin ( the minimum value for x)
-    # And xMax ( the maximum value for x)
 
-'''
-
-    :
-        plot(f,xMin,xMax)
-        
-
-
-
-'''
 
 
 
