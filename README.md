@@ -13,7 +13,7 @@
 
 <p> the function is of one variable x </br>
 
-supported functions:
+<h2> supported functions: </h2>
 
 <h3> x^n </h3>
 <h3> e^(x) </h3>
