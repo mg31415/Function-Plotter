@@ -7,9 +7,9 @@
 
 <h2> Dependencies </h2>
 
-pip install PySide2
-pip install numpy
-pip install matplotlib
+<p> pip install PySide2 </p>
+<p> pip install numpy </p>
+<p> pip install matplotlib </p>
 
 the function is of one variable x
 
