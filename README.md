@@ -14,8 +14,9 @@ pip install matplotlib
 the function is of one variable x
 
 supported functions:
-x^n     sin(x)
-e^(x)   cos(x)
-ln(x)   tan(x)
-
-
+x^n   
+e^(x)   
+ln(x)   
+sin(x)
+cos(x)
+tan(x)
