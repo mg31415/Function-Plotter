@@ -11,7 +11,7 @@
 <p> pip install numpy </p>
 <p> pip install matplotlib </p>
 
-the function is of one variable x
+<p> the function is of one variable x </br>
 
 supported functions:
 
