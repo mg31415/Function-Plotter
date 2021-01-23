@@ -1,6 +1,5 @@
 
-from main import Plotter
-
+from main import*
 def test_power():
     f="x^2"
     assert Plotter().power(f)=="x**2"
@@ -37,7 +36,9 @@ def test_f():
 
 
 
+        
 
 
-    
 
+
+        
