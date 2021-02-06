@@ -3,7 +3,8 @@
 
 
 
-
+<h2> Plots functions using matplotlib, GUI using pyside2 </h2>
+<h3> tested using pytest </h3>
 
 <h2> Dependencies </h2>
 
